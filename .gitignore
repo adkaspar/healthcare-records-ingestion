@@ -1,0 +1,11 @@
+# Secrets
+client_secret*.json
+token*.json
+
+# Local copies of medical records
+records/
+
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
