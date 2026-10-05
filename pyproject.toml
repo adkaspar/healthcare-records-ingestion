@@ -1,0 +1,25 @@
+[project]
+name = "healthcare-records-ingestion"
+version = "0.1.0"
+description = "Import medical records from Google Drive into a FHIR R4 store in the Cloud Healthcare API."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "google-auth>=2.20",
+    "google-auth-oauthlib>=1.0",
+    "anthropic>=1.11",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+health-records = "health_records.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["health_records"]
